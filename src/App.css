@@ -122,3 +122,7 @@ body {
 .navbar>a:hover {
   background-color: gray;
 }
+
+.warning {
+  font-size: 80px;
+}

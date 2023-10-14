@@ -29,7 +29,16 @@ function App() {
                 </div>
             </div>
             <div className="section" id='section2'>
-
+                <div className='mainContent'>
+                    <div className="heading">
+                        <h1>
+                            Work in progress
+                            <span className="material-symbols-outlined warning">
+                                warning
+                            </span>
+                        </h1>
+                    </div>
+                </div>
             </div>
         </div>
     );
