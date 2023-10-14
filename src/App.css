@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;412&family=Roboto&display=swap');
+
+.html {
+  scroll-behavior: smooth;
+}
+
+.App::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  scroll-snap-type: both mandatory;
+  overflow: auto;
+  height: 100vh;
+  scrollbar-width: none;
+}
+
+
+.navbar {
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  position: fixed;
+  display: flex;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  color: black;
+  background-color: rgba(176, 176, 176, 0.136);
+  box-shadow: 0px 5px 10px black;
+}
+
+#banner {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 2px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#banner:hover {
+  background-color: transparent;
+}
+
+#section1 {
+  background-color: #BEEDAA;
+}
+
+#section2 {
+  background-color: #D5FFD9;
+}
+
+.mainContent {
+  height: 100%;
+}
+
+.heading {
+  height: 100%;
+  display: flex;
+  text-align: center;
+  letter-spacing: 10px;
+  font-size: 50px;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.heading > h1 {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.material-symbols-outlined.down-arrow {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-weight: 3px;
+  text-decoration: none;
+  color: black;
+  animation: bob 1s infinite;
+}
+
+@keyframes bob {
+
+  0%,
+  100% {
+    transform: translateY(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateY(-50%) translateY(-10px);
+  }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.section {
+  box-sizing: border-box;
+  padding-top: 46px;
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+.navbar > a {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  padding: 5px 10px 5px 10px;
+  transition: 0.2s linear all;
+  letter-spacing: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar>a:hover {
+  background-color: gray;
+}
