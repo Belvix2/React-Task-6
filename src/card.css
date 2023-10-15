@@ -1,0 +1,107 @@
+.card {
+    text-align: center;
+    width: 20%;
+    background-color: transparent;
+    perspective: 1000px;
+    position: relative;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.card-front {
+    box-shadow: 2px 2px 10px;
+    border-radius: 10px;
+    border: 1px black solid;
+    color: black;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    box-shadow: 2px 2px 10px;
+    border-radius: 10px;
+    border: 1px black solid;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    filter: grayscale(100%) brightness(50%);
+    object-fit: contain;
+}
+
+.card-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title {
+    box-sizing: border-box;
+    flex-grow: 0;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 2px 5px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-image {
+    flex-grow: 1;
+}
+
+.card-back-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.open-button {
+    background-color: rgba(255, 255, 255, 0.355);
+    border-radius: 5px;
+    width: 50%;
+    height: 30%;
+    text-align: center;
+    box-shadow: 2px 2px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+.open-button:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+iframe {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+}
