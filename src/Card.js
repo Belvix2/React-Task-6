@@ -1,6 +1,7 @@
+import { useEffect } from 'react';
 import './card.css'
 
-function Card({ name, img, prefix, taskNo, suffix}) {
+function Card({ name, img, openIFrame}) {
     return (
         <div className="card">
             <div className="card-inner">
@@ -15,8 +16,7 @@ function Card({ name, img, prefix, taskNo, suffix}) {
                         {name}
                     </div>
                     <div className='card-back-body'>
-                        <iframe src={prefix+taskNo+suffix}></iframe>
-                        <a className='open-button' href={prefix+taskNo+suffix} target='_blank'>Open</a>
+                        <button className="openOverlay" onClick={openIFrame}>Preview Page</button>
                     </div>
                 </div>
             </div>

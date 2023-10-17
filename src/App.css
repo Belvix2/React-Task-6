@@ -31,7 +31,7 @@
   width: 100%;
   color: black;
   background-color: rgba(176, 176, 176, 0.136);
-  box-shadow: 0px 5px 10px black;
+  box-shadow: 0px 2px 5px black;
 }
 
 #banner {
@@ -119,7 +119,7 @@ body {
 .navbar > a {
   text-decoration: none;
   color: black;
-  font-size: 30px;
+  font-size: 20px;
   padding: 5px 10px 5px 10px;
   transition: 0.2s linear all;
   letter-spacing: 5px;
@@ -139,28 +139,27 @@ body {
 }
 
 .heading.html-heading, .heading.css-heading {
-  justify-content: start;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   flex-grow: 0;
   flex-basis: auto;
   height: auto;
 }
 
 #HTMLProj, #CSSProj {
-  padding-left: 30px;
-  padding-top: 30px;
   letter-spacing: 5px;
-  margin: 0px;
   position: static;
-  transform: none;
-  text-align: start;
-  max-width: 0;
+  text-align: center;
+  margin-top: 20px;
+  width: 0;
   overflow: hidden;
-  transition: max-width 3s;
+  transition: width 1s linear;
   white-space: nowrap;
 }
 
 #HTMLProj.entrance, #CSSProj.entrance {
-  max-width: 100%;
+  width: 30%;
 }
 
 #welcome-heading {
@@ -192,3 +191,65 @@ body {
   gap: 10px;
 }
 
+/* Hide the overlay initially */
+.hidden {
+  display: none;
+}
+
+/* Style the overlay container */
+#overlay {
+  position: fixed;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  /* Semi-transparent background */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Style the iframe within the overlay */
+#overlay iframe {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background-color: white;
+}
+
+/* Style the close button */
+#closeOverlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border-radius: 100%;
+  padding: 0px;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+#closeOverlay > .material-symbols-outlined {
+  background-color: transparent;
+  font-size: 50px;
+}
+
+.card {
+  scale: 0;
+  transition: scale 1s;
+}
+
+.card.entrance {
+  scale: 1;
+}

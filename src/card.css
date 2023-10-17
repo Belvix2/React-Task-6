@@ -3,6 +3,7 @@
     width: 20%;
     background-color: transparent;
     perspective: 1000px;
+    transform-style: preserve-3d;
     position: relative;
 }
 
@@ -12,6 +13,10 @@
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.5s;
+    box-shadow: 2px 2px 10px;
+    border: 1px black solid;
+    color: black;
+    border-radius: 10px;
 }
 
 .card:hover .card-inner {
@@ -30,18 +35,12 @@
     justify-content: center;
 }
 
-.card-front {
-    box-shadow: 2px 2px 10px;
-    border-radius: 10px;
-    border: 1px black solid;
-    color: black;
-}
-
 .card-back {
     transform: rotateY(180deg);
-    box-shadow: 2px 2px 10px;
-    border-radius: 10px;
-    border: 1px black solid;
+}
+
+.card-front {
+    transform: rotateY(0deg);
 }
 
 img {
@@ -58,13 +57,13 @@ img {
 }
 
 .card-title {
+    position: relative;
     box-sizing: border-box;
     flex-grow: 0;
     height: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 0px 2px 5px;
     width: 100%;
     overflow: hidden;
 }
@@ -100,8 +99,8 @@ img {
     background-color: rgb(255, 255, 255);
 }
 
-iframe {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 10px;
+.openOverlay {
+    background-color: transparent;
+    border: 0px;
+    box-shadow: 2px 2px 5px;
 }
